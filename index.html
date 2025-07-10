@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Page with Clickable Hamburger Menu</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h2>Welcome to MyWebsite</h2>
+    <p>We help you build modern, responsive websites with clean code, beautiful design, and fast performance. Scroll down to learn more!</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a team of creative developers and designers passionate about building digital experiences that look great and perform even better. Our mission is to make the web beautiful and accessible to all.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>From landing pages to full-stack web apps, we deliver scalable and high-quality solutions. We specialize in frontend frameworks like React, backend APIs with Node.js, and modern design practices.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Let's work together! Drop us a message at <a href="mailto:contact@mywebsite.com">contact@mywebsite.com</a> or connect with us on social media.</p>
+  </section>
+
+<script src="index.js"></script>
+
+</body>
+</html>
