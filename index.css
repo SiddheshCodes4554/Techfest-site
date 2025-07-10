@@ -1,0 +1,131 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+    }
+
+    :root {
+      --primary: #004aad;
+      --accent: #00c9a7;
+      --light: #fff;
+      --text: #222;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: var(--light);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      padding: 12px 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: var(--accent);
+      border-radius: 5px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--light);
+      margin: 4px;
+      transition: 0.4s;
+    }
+
+    /* Hamburger Animation - Open State */
+    .hamburger.open div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--primary);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    /* Page Sections */
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    #home { background: #eef5ff; }
+    #about { background: #f0faff; }
+    #services { background: #f8fff9; }
+    #contact { background: #fff5f5; }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: var(--text);
+      max-width: 700px;
+    }
